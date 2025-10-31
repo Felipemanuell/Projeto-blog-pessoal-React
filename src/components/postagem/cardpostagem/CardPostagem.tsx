@@ -7,20 +7,20 @@ interface CardPostagensProps {
 
 function CardPostagem({ postagem }: CardPostagensProps) {
     return (
-        <div className='border-slate-900 border 
+        <div className='border-slate-900 bg-[#212B35] border 
             flex flex-col rounded overflow-hidden justify-between'>
                 
             <div>
-                <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
+                <div className="flex w-full bg-[#503680] py-2 px-4 items-center gap-4">
                     <img
-                        src={postagem.usuario?.foto}
+                      src={postagem.usuario?.foto || "https://cdn-icons-png.flaticon.com/512/2815/2815428.png"}
                         className='h-12 rounded-full'
                         alt={postagem.usuario?.nome} />
-                    <h3 className='text-lg font-bold text-center uppercase'>
+                    <h3 className='text-lg font-bold text-center text-white uppercase'>
                         {postagem.usuario?.nome}
                     </h3>
                 </div>
-                <div className='p-4 '>
+                <div className='p-4 text-[#E764F3]'>
                     <h4 className='text-lg font-semibold uppercase'>{postagem.titulo}</h4>
                     <p>{postagem.texto}</p>
                     <p>Tema: {postagem.tema?.descricao}</p>
@@ -31,14 +31,14 @@ function CardPostagem({ postagem }: CardPostagensProps) {
                 </div>
             </div>
             <div className="flex">
-                <Link to='' 
-                    className='w-full text-white bg-indigo-400 
-                    hover:bg-indigo-800 flex items-center justify-center py-2'>
+                <Link to={'/editarpostagem/${postagem.id}'}
+                    className='w-full text-white bg-[#673389] 
+                    hover:bg-[#074c85] flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
-                <Link to='' 
-                    className='text-white bg-red-400 
-                    hover:bg-red-700 w-full flex items-center justify-center'>
+                <Link to={`/deletarpostagem/${postagem.id}`} 
+                    className='text-white bg-[#E134DB] 
+                    hover:bg-[#850505] w-full flex items-center justify-center'>
                     <button>Deletar</button>
                 </Link>
             </div>

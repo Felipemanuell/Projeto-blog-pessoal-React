@@ -66,7 +66,7 @@ async function cadastrarNovoUsuario(e: FormEvent<HTMLFormElement>){
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
         <div
-          className="bg-[url('https://i.imgur.com/2ZFAmno.jpg')] lg:block hidden bg-no-repeat w-full h-full bg-center"
+          className="bg-[url('https://i.pinimg.com/736x/8b/1e/d5/8b1ed5753c6c53228b0cd4e3e2a91ca3.jpg')] lg:block hidden bg-no-repeat w-full h-full bg-center"
         ></div>
 
         <form className="flex justify-center items-center flex-col w-2/3 gap-3"
@@ -141,7 +141,7 @@ async function cadastrarNovoUsuario(e: FormEvent<HTMLFormElement>){
           <div className="flex justify-around w-full gap-8">
             <button
               type="reset"
-              className="rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2"
+              className="rounded text-white bg-[#96091a]  hover:bg-[#BF9264] w-1/2 py-2"
               onClick={retornar}
             >
               Cancelar
@@ -149,7 +149,7 @@ async function cadastrarNovoUsuario(e: FormEvent<HTMLFormElement>){
 
             <button
               type="submit"
-              className="rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2"
+              className="rounded text-white bg-[#356c90] hover:bg-[#626F47] w-1/2 py-2"
             >
               {isLoading ?
               <ClipLoader

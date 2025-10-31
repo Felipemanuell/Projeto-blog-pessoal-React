@@ -4,8 +4,8 @@ import ModalPostagem from "../../components/postagem/modalpostagem/ModalPostagem
 function Home() {
   return (
     <>
-      <div className="bg-indigo-900 flex justify-center">
-        <div className='container grid grid-cols-2 text-white'>
+      <div className="bg-[#10181b] flex justify-center">
+        <div className='container grid grid-cols-2 text-[#9240e3]'>
           <div className='flex flex-col gap-4 items-center justify-center py-4'>
             <h2 className='text-5xl font-bold'>
               Seja Bem Vinde!
@@ -22,7 +22,7 @@ function Home() {
 
           <div className="flex justify-center ">
             <img
-              src="https://i.imgur.com/fyfrilv.png"
+              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zoe_1.jpg"
               alt="Imagem Página Home"
               className='w-2/3'
             />

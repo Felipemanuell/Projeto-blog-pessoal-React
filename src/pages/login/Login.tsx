@@ -33,32 +33,43 @@ function Login() {
 }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-[#10181b] ">
       <form className="flex justify-center items-center flex-col w-1/2 gap-4 "
         onSubmit={login}>
-        <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+        <h2 className="text-[#73FFC7] text-5xl ">Entrar</h2>
 
         <div className="flex flex-col w-full">
-          <label htmlFor="usuario">Usuário</label>
-          <input
-            type="text"
-            id="usuario"
-            name="usuario"
-            placeholder="Usuário"
-            className="border-2 border-slate-700 rounded p-2"
-            value = {usuarioLogin.usuario}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-          />
-        </div>
+  <label htmlFor="usuario" className="text-[#73FFC7]">Usuário</label>
+  <input
+    type="text"
+    id="usuario"
+    name="usuario"
+    placeholder="Usuário"
+    className="
+      border-2 border-slate-700 rounded p-2 text-[#73FFC7]
+      placeholder-gray-400       /* cor padrão do placeholder */
+      focus:placeholder-[#2c634d]  /* muda a cor do placeholder ao focar/digitar */
+      focus:outline-none
+    "
+    value={usuarioLogin.usuario}
+    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+  />
+</div>
+
 
         <div className="flex flex-col w-full">
-          <label htmlFor="senha">Senha</label>
+          <label htmlFor="senha"  className="text-[#73FFC7]" >Senha</label>
           <input
             type="password"
             id="senha"
             name="senha"
             placeholder="Senha"
-            className="border-2 border-slate-700 rounded p-2"
+            className="
+        border-2 border-slate-700 rounded p-2 text-[#73FFC7]
+        placeholder-gray-400       /* cor padrão do placeholder */
+        focus:placeholder-[#2c634d]  /* muda a cor do placeholder ao focar/digitar */
+        focus:outline-none
+"
             value = {usuarioLogin.senha}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
@@ -66,7 +77,7 @@ function Login() {
 
         <button
           type="submit"
-          className="rounded bg-indigo-400 flex justify-center hover:bg-indigo-900 text-white w-1/2 py-2"
+          className="rounded bg-[#356c90] flex justify-center hover:bg-[#074c85] text-white w-1/2 py-2"
         >
           {isLoading ? 
           <ClipLoader 
@@ -79,16 +90,16 @@ function Login() {
 
         <hr className="border-slate-800 w-full" />
 
-        <p>
+        <p className="text-[#FEFEFA]">
           Ainda não tem uma conta?{" "}
-          <Link to="/cadastro" className="text-indigo-800 hover:underline">
+          <Link to="/cadastro" className="text-[#41B1C5] hover:underline">
             Cadastre-se
           </Link>
         </p>
       </form>
 
       <div
-        className="bg-[url('https://i.imgur.com/ZZFAmzo.jpg')] lg:block hidden bg-no-repeat w-full min-h-screen bg-cover bg-center"
+        className="bg-[url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zoe_1.jpg')] lg:block hidden bg-no-repeat w-full min-h-screen bg-cover bg-center"
       ></div>
     </div>
   );
