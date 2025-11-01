@@ -5,6 +5,7 @@ import CardTema from "../cardtema/CardTema"
 import { AuthContext } from "../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import type Tema from "../../../models/Tema";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function ListaTemas() {
 
@@ -19,7 +20,7 @@ const token = usuario.token;
 
 useEffect(() => {
   if (token === '') {
-    alert('Você precisa estar logado!');
+    ToastAlerta("Você precisa estar logado!", "erro");
     navigate('/');
   }
 }, [token]);

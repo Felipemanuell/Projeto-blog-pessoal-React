@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { AuthContext } from "../../../context/AuthContext";
 import type Tema from "../../../models/Tema";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function FormTema() {
 
@@ -80,7 +81,7 @@ async function gerarNovoTema(e: FormEvent<HTMLFormElement>) {
       if (error.toString().includes('401')) {
         handleLogout();
       } else {
-        alert('Erro ao cadastrar o tema.');
+        ToastAlerta("Erro ao cadastrar o tema.","erro");
       }
     }
   }
